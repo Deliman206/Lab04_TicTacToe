@@ -33,29 +33,19 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Player that triggered the true flag of method CheckForWinner</returns>
 		public Player Play()
 		{
-            int turnCounter = 1;
-
-            while (turnCounter < 9)
+            int turnCounter = 0;
+            while(turnCounter < 9)
             {
                 Console.Clear();
                 Board.DisplayBoard();
-                PlayerOne.TakeTurn(Board);
+                SwitchPlayer();
+                Player player = NextPlayer();
+                player.TakeTurn(Board);
                 if (CheckForWinner(Board))
                 {
                     Console.Clear();
                     Board.DisplayBoard();
-                    return PlayerOne;
-                }
-                turnCounter += 1;
-                NextPlayer();
-                Console.Clear();
-                Board.DisplayBoard();
-                PlayerTwo.TakeTurn(Board);
-                if (CheckForWinner(Board))
-                {
-                    Console.Clear();
-                    Board.DisplayBoard();
-                    return PlayerTwo;
+                    return player;
                 }
                 turnCounter += 1;
             }
@@ -122,10 +112,7 @@ namespace Lab04_TicTacToe.Classes
 		{
 			if (PlayerOne.IsTurn)
 			{
-              
 				PlayerOne.IsTurn = false;
-
-              
 				PlayerTwo.IsTurn = true;
 			}
 			else
