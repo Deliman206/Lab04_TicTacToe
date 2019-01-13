@@ -29,7 +29,7 @@ namespace Lab04_TicTacToe
             if (winnerOfGame.Name == "Draw")
             {
                 Console.WriteLine("Sorry, this game was a draw.");
-            }
+            } else
             Console.WriteLine($"{winnerOfGame.Name}, you win this game!");
             Console.Read();
         }
