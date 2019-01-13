@@ -16,12 +16,21 @@ namespace Lab04_TicTacToe.Classes
 			{"7", "8", "9"},
 		};
 
-
+        /// <summary>
+        /// Converts the Multidimentional to a visual board in the console.
+        /// </summary>
 		public void DisplayBoard()
 		{
-			
-			//TODO: Output the board to the console
-		
-		}
+            string board = "";
+            for (int i = 0; i < GameBoard.GetLength(0); i++)
+            {
+                for (int k = 0; k < GameBoard.GetLength(1); k++)
+                {
+                    board +=  $"|{GameBoard[i, k]}|";
+                }
+                board += "\n";
+            }
+            Console.WriteLine(board);
+        }
 	}
 }
