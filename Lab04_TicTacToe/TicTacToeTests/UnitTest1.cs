@@ -1,11 +1,10 @@
 using System;
 using Xunit;
 using Lab04_TicTacToe.Classes;
-using Lab04_TicTacToe;
 
 namespace TicTacToeTests
 {
-    public class UnitTest1
+    public class CheckForWinnerTests
     {
         Board board = new Board();
 
@@ -33,7 +32,8 @@ namespace TicTacToeTests
         [Fact]
         public void PlayerOneWinsCheckForWinner()
         {
-            Assert.Equal("true", Game.CheckForWinner(board).ToString());
+
+            Assert.Equal("true", CheckForWinner(board).ToString());
         }
 
         board.GameBoard = OWinnerGameBoard;
@@ -50,6 +50,35 @@ namespace TicTacToeTests
         public void PlayerDrawWinsCheckForWinner()
         {
             Assert.Equal("true", Game.CheckForWinner(board).ToString());
+        }
+    }
+    public class SwitchPlayerTests
+    {
+        Player p1 = new Player();
+        Player p2 = new Player();
+
+        [Fact]
+        public void SwitchTurnOnPlayerOne()
+        {
+           
+            Assert.Equal("True", p1.IsTurn.ToString());
+            SwitchPlayer();
+            Assert.Equal("False", p1.IsTurn.ToString());
+        }
+        [Fact]
+        public void SwitchTurnOnPlayerTwo()
+        {
+            Assert.Equal("True", p2.IsTurn.ToString());
+            SwitchPlayer();
+            Assert.Equal("False", p2.IsTurn.ToString());
+        }
+    }
+    public class MarkerToCorrectBoardPosition
+    {
+        [Fact]
+        public void test1()
+        {
+
         }
     }
 }
