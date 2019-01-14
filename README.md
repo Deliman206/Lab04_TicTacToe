@@ -9,19 +9,19 @@ Once a player wins the game or a draw is determined, a end message appears and t
 
 ## Stages of the Game
 The Game Begins with the Players input their name
-![playerName](assets/PlayerNames)
+![playerName](assets/PlayerNames.png)
 
 And then Player One takes a turn by choosing a numeric tile
-![p1Mark](assets/PlaceMarkerP1)
+![p1Mark](assets/PlaceMarkerP1.png)
 
 Followed by Player Two
-![p2Mark](assets/PlaceMarkerP2)
+![p2Mark](assets/PlaceMarkerP2.png)
 
 When player gets Tic- Tac- Toe
-![p1Wins](assets/PlayerOneWin)
+![p1Wins](assets/PlayerOneWin.png)
 
 When there is a draw
-![drawWins](assets/SorryDraw)
+![drawWins](assets/SorryDraw.png)
 
 ## Details of User Input
 - The User must choose a position on the board or the turn cannot be passed.
