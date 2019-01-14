@@ -21,6 +21,7 @@ When player gets Tic- Tac- Toe
 ![p1Wins](assets/PlayerOneWin.png)
 
 When there is a draw
+
 ![drawWins](assets/SorryDraw.png)
 
 ## Details of User Input
