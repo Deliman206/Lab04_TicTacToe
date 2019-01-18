@@ -26,7 +26,6 @@ namespace Lab04_TicTacToe.Classes
             Draw.Name = "Draw";
 			Board = new Board();
 		}
-
 		/// <summary>
 		/// Activate the Play of the game
 		/// </summary>
@@ -41,7 +40,7 @@ namespace Lab04_TicTacToe.Classes
                 SwitchPlayer();
                 Player player = NextPlayer();
                 player.TakeTurn(Board);
-                if (CheckForWinner(Board))
+                if (CheckForWinner())
                 {
                     Console.Clear();
                     Board.DisplayBoard();
@@ -53,14 +52,12 @@ namespace Lab04_TicTacToe.Classes
             Board.DisplayBoard();
             return Draw;
 		}
-
-
 		/// <summary>
 		/// Check if winner exists
 		/// </summary>
 		/// <param name="board">current state of the board</param>
 		/// <returns>if winner exists</returns>
-		public bool CheckForWinner(Board board)
+		public bool CheckForWinner()
 		{
 			int[][] winners = new int[][]
 			{
@@ -93,8 +90,6 @@ namespace Lab04_TicTacToe.Classes
             }
             return false;
 		}
-
-
 		/// <summary>
 		/// Determine next player
 		/// </summary>
@@ -120,7 +115,5 @@ namespace Lab04_TicTacToe.Classes
 				PlayerTwo.IsTurn = false;
 			}
 		}
-
-
 	}
 }
